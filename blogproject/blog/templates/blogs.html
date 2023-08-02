@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% for blog in blogs %}
+    {% if blog.is_active %}
+        {% include 'partials/_blog.html' %}
+    {% endif %} 
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+<div class="container mt-3">
+    <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <a href="{% url 'blog_detail' blog.slug %}">
+                <img src="{{ blog.image.url }}" class="img-fluid rounded-start" style="width:100%; height: 180px;">
+            </a>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="{% url 'blog_detail' blog.slug %}"  style="text-decoration: none;">
+                    {{ blog.title }}
+              </a>
+              </h5>
+              <p class="card-text">
+                {{ blog.description|safe }}
+              </p>
+              <p class="card-text"><small class="text-body-secondary">
+                {{ blog.created_date }}
+              </small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

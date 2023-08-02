@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'partials/_carousel.html' %}
+
+{% for blog in blogs %}
+    {% if blog.is_active %}
+        {% include 'partials/_blog.html' %}
+    {% endif %} 
+{% endfor %}
+
+{% endblock %}
